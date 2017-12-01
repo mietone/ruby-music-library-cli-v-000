@@ -45,6 +45,11 @@ class MusicLibraryController
       puts "#{i}. #{s.artist.name} - #{s.name} - #{s.genre.name}"
     end
   end
-  # binding.pry
+
+  def list_artists
+    Artist.all.sort{|a, b| a.name.downcase <=> b.name.downcase}.each.with_index(1) do |a, i|
+      puts "#{{i}}. #{a.name}"
+    end
+  end
 
 end
