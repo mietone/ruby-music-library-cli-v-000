@@ -86,6 +86,7 @@ class MusicLibraryController
 
     if (1..Song.all.length).include?(input)
       choice = Song.all.sort{|a, b| a.name.downcase <=> b.name.downcase}[input]
+    end
 
   end
 
