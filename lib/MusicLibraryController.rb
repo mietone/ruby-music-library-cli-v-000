@@ -39,7 +39,7 @@ class MusicLibraryController
   end
 
 
-  def list_songs_by_artist
+  def list_songs
     song.all.sort
   end
 
