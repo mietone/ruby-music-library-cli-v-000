@@ -88,6 +88,8 @@ class MusicLibraryController
       choice = Song.all.sort{|a, b| a.name.downcase <=> b.name.downcase}[input]
     end
 
+    puts "Playing #{choice.name} by #{choice.artist.name}"
+
   end
 
 end
