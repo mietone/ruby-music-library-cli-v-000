@@ -41,7 +41,7 @@ class MusicLibraryController
 
 
   def list_songs
-    Song.all.sort_by{|s| s.downcase}
+    Song.all.sort_by{|s| s.name.downcase}
   end
   # binding.pry
 
