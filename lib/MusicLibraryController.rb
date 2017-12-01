@@ -82,9 +82,10 @@ class MusicLibraryController
 
   def play_song
     puts "Which song number would you like to play?"
-    input = gets.strip
+    input = gets.strip.to_i
 
-    # if data = Song.find_by_name(input)
+    if (1..Song.all.length).include?(input)
+      choice = Song.all.sort{|a, b| a.name.downcase <=> b.name.downcase}[input]
 
   end
 
