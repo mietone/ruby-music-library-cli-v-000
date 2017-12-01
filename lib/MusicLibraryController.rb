@@ -34,8 +34,13 @@ class MusicLibraryController
         list songs_by_genre
       when 'play song'
         play song
-      end    
+      end
     end
+  end
+
+
+  def list_songs_by_artist
+    song.all.sort
   end
 
 end
