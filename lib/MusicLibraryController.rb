@@ -41,8 +41,8 @@ class MusicLibraryController
 
 
   def list_songs
-    Song.all.sort
+    Song.all.sort_by{|s| s.downcase}
   end
-  binding.pry
+  # binding.pry
 
 end
