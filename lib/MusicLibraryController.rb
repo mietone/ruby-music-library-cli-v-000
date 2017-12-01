@@ -62,8 +62,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     input = gets.strip
 
-    select = Artist.find_by_name(input)
-    select.sort{|a, b| a.name.downcase <=> b.name.downcase}.each.with_index(1) do |s, i|
+    Artist.find_by_name(input).sort{|a, b| a.name.downcase <=> b.name.downcase}.each.with_index(1) do |s, i|
       puts "#{i}. #{s.name}"
     end
   end
