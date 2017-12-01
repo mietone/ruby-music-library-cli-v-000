@@ -24,11 +24,11 @@ class MusicLibraryController
 
       case input
       when 'list songs'
-        list artists
-      when 'list artists'
-        list genres
-      when 'list genres'
         list songs
+      when 'list artists'
+        list artists
+      when 'list genres'
+        list genres
       when 'list artist'
         list_songs_by_artist
       when 'list genre'
@@ -60,8 +60,8 @@ class MusicLibraryController
 
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
-    input = ""
     input = gets.strip
+
     select = Artist.find_by_name(input)
     select.sort{|a, b| a.name.downcase <=> b.name.downcase}.each.with_index(1) do |s, i|
       puts "#{i}. #{s.name}"
