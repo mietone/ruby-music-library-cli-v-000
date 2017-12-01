@@ -80,4 +80,12 @@ class MusicLibraryController
     end
   end
 
+  def play_song
+    puts "Please enter the name of a song:"
+    input = gets.strip
+
+    # if data = Song.find_by_name(input)
+
+  end
+
 end
