@@ -85,7 +85,7 @@ class MusicLibraryController
     input = gets.strip.to_i
 
     if (1..Song.all.length).include?(input)
-      choice = Song.all.sort{|a, b| a.name.downcase <=> b.name.downcase}[input]
+      choice = Song.all.sort{|a, b| a.name.downcase <=> b.name.downcase}[input - 1]
     end
 
     puts "Playing #{choice.name} by #{choice.artist.name}"
